@@ -1,14 +1,15 @@
 package com.human.dao;
 
-import java.sql.SQLException;
 import java.util.List;
+
+import org.springframework.dao.DataAccessException;
 
 import com.human.VO.FoodVO;
 
 public interface IF_FoodDAO {
 	
-	void insertFood(FoodVO foodVO) throws SQLException;
-	FoodVO selectOne(int food_no) throws SQLException;
-	List<FoodVO> selectAll() throws SQLException;
-	void updateFoodCost(FoodVO foodVO) throws SQLException;
+	void insertFood(FoodVO foodVO) throws DataAccessException, Exception;
+	FoodVO selectOne(int food_no) throws DataAccessException, Exception;
+	List<FoodVO> selectAll() throws DataAccessException, Exception;
+	void updateFoodCost(FoodVO foodVO) throws DataAccessException, Exception;
 }
