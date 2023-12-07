@@ -1,0 +1,41 @@
+package com.human.VO;
+
+public class UserVO {
+	
+	private int height;
+	private int weight;
+	private int age;
+	private boolean gender;
+	
+	public int getHeight() {
+		return height;
+	}
+	
+	public void setHeight(int height) {
+		this.height = height;
+	}
+	
+	public int getWeight() {
+		return weight;
+	}
+	
+	public void setWeight(int weight) {
+		this.weight = weight;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public boolean isGender() {
+		return gender;
+	}
+	
+	public void setGender(boolean gender) {
+		this.gender = gender;
+	}
+}
