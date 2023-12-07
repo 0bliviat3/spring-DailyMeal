@@ -2,24 +2,24 @@ package com.human.VO;
 
 public class UserVO {
 	
-	private int height;
-	private int weight;
+	private double height;
+	private double weight;
 	private int age;
 	private boolean gender;
 	
-	public int getHeight() {
+	public double getHeight() {
 		return height;
 	}
 	
-	public void setHeight(int height) {
+	public void setHeight(double height) {
 		this.height = height;
 	}
 	
-	public int getWeight() {
+	public double getWeight() {
 		return weight;
 	}
 	
-	public void setWeight(int weight) {
+	public void setWeight(double weight) {
 		this.weight = weight;
 	}
 	
