@@ -4,8 +4,5 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.human.dao.IF_FoodDAO">
 
-<<<<<<< HEAD
-=======
 
->>>>>>> f216891fd3b63ba5ac8d118585e52576a6932b5e
 </mapper>
