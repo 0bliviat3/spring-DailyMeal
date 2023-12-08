@@ -13,6 +13,8 @@
 		<org.springframework-version>4.3.22.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.8.9</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<junit-jupiter.version>5.5.0</junit-jupiter.version>
+    	<junit-platform.version>1.4.2</junit-platform.version>
 	</properties>
 
 	<repositories>
@@ -120,32 +122,24 @@
 		</dependency>
 
 		<!-- Test -->
-		<!-- <dependency> <groupId>junit</groupId> <artifactId>junit</artifactId> 
-			<version>4.7</version> <scope>test</scope> </dependency> -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<version>5.2.0</version>
-			<scope>test</scope>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${junit-jupiter.version}</version>
+			<scope>import</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
-			<version>1.2.0</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-params</artifactId>
-			<version>5.2.0</version>
-			<scope>test</scope>
+			<version>${junit-platform.version}</version>
+			<scope>import</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<version>3.12.2</version>
-			<scope>test</scope>
+			<scope>import</scope>
 		</dependency>
 
 		<dependency>
@@ -222,6 +216,11 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.2</version>
 			</plugin>
+			
+			<plugin>
+        		<artifactId>maven-surefire-plugin</artifactId>
+            	<version>2.22.1</version>
+        	</plugin>
 
 		</plugins>
 	</build>
