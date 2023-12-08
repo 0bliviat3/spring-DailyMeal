@@ -8,8 +8,8 @@ import com.human.VO.MenuVO;
 
 public interface IF_MenuDAO {
 	
-	void insertMenu(MenuVO menuVO) throws DataAccessException, Exception;
-	MenuVO selectOne(int menu_no) throws DataAccessException, Exception;
-	List<MenuVO> selectAll() throws DataAccessException, Exception;
+	public void insertMenu(MenuVO menuVO) throws DataAccessException, Exception;
+	public MenuVO selectOne(int menu_no) throws DataAccessException, Exception;
+	public List<MenuVO> selectAll() throws DataAccessException, Exception;
 
 }

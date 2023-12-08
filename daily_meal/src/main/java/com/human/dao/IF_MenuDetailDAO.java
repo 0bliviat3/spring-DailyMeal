@@ -8,7 +8,7 @@ import com.human.VO.MenuDetailVO;
 
 public interface IF_MenuDetailDAO {
 	
-	void insertMenuDetail(MenuDetailVO menuDetailVO) throws DataAccessException, Exception;
-	List<MenuDetailVO> selectMenu(int menu_no) throws DataAccessException, Exception;
+	public void insertMenuDetail(MenuDetailVO menuDetailVO) throws DataAccessException, Exception;
+	public List<MenuDetailVO> selectMenu(int menu_no) throws DataAccessException, Exception;
 
 }
