@@ -3,4 +3,28 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.human.dao.IF_FoodDetailDAO">
+	
+	<insert id="insertFoodDetail" parameterType="com.human.VO.FoodDetailVO">
+		insert into food_detail_tbl  values(#{food_no},#{food_cnt},#{food_indate})
+	</insert>
+	
+	
+	<select id="selectFoodDetail" parameterType="int" resultType="com.human.VO.FoodDetailVO">
+		select * from food_detail_tbl  where food_no = #{food_no}
+	</select>
+	
+	
+	<select id="selectFoodDetailList" resultType="com.human.VO.FoodDetailVO">
+		select * from food_detail_tbl 
+	</select>
+	
+	
+	<update id="updateFood" parameterType="int">
+		update food_detail_tbl  set food_cnt  = #{updateFoodCnt}
+	</update>
+	
+	<delete id="deleteFoodDetail" parameterType="int">
+		delete from food_detail_tbl where food_no = #{deleteFoodNo}
+	</delete>
+
 </mapper>
