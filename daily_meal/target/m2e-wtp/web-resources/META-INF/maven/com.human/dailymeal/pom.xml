@@ -10,11 +10,11 @@
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.8</java-version>
-		<org.springframework-version>4.3.22.RELEASE</org.springframework-version>
+		<org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.8.9</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 		<junit-jupiter.version>5.5.0</junit-jupiter.version>
-    	<junit-platform.version>1.4.2</junit-platform.version>
+		<junit-platform.version>1.4.2</junit-platform.version>
 	</properties>
 
 	<repositories>
@@ -43,6 +43,14 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- 스프링 테스트 라이브러리 추가 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${org.springframework-version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- AspectJ -->
@@ -126,20 +134,20 @@
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
 			<version>${junit-jupiter.version}</version>
-			<scope>import</scope>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.platform</groupId>
 			<artifactId>junit-platform-runner</artifactId>
 			<version>${junit-platform.version}</version>
-			<scope>import</scope>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.assertj</groupId>
 			<artifactId>assertj-core</artifactId>
 			<version>3.12.2</version>
-			<scope>import</scope>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
@@ -216,11 +224,11 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>3.2.2</version>
 			</plugin>
-			
+
 			<plugin>
-        		<artifactId>maven-surefire-plugin</artifactId>
-            	<version>2.22.1</version>
-        	</plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.22.1</version>
+			</plugin>
 
 		</plugins>
 	</build>
