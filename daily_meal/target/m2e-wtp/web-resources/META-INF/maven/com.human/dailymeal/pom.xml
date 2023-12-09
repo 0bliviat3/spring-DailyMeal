@@ -122,36 +122,6 @@
 		</dependency>
 
 		<!-- Test -->
-<<<<<<< HEAD
-		<!-- <dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.7</version>
-			<scope>test</scope>
-		</dependency> -->
-		<dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>${junit-jupiter.version}</version>
-            <scope>import</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>${junit-platform.version}</version>
-            <scope>import</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.12.2</version>
-            <scope>import</scope>
-        </dependency>
-		
-		
-		
-=======
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
@@ -171,7 +141,6 @@
 			<version>3.12.2</version>
 			<scope>import</scope>
 		</dependency>
->>>>>>> 37ae38110528035fbaf827c0c37d8a6f70bba256
 
 		<dependency>
 			<groupId>com.oracle</groupId>
