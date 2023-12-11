@@ -137,3 +137,6 @@ update menu_tbl set menu_cost = calculate_menu(0) where menu_no = 0;
 select * from menu_tbl;
 
 
+--메뉴 카테고리 추가
+alter table menu_tbl add menu_category varchar2(10);
+alter table menu_tbl add check(menu_category in ('밥', '메인메뉴', '사이드메뉴', '국', '간식'));
