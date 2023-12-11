@@ -39,7 +39,8 @@ public class DailyMealServiceTest {
 	@DisplayName("사용자의 BMR정보와 운동계수로 일일 칼로리소모량 계산후 리턴")
 	@CsvSource(value = {"1719:2:2664", "1204:0:1445", "1153:1:1585"}, delimiter = ':')
 	void calculateCaloriesByUserBMRAndActivity(int BMR, int activity, int calories) {
-		 assertThat(dailymealService.calculateCalories(BMR, activity)).isEqualTo(calories);
+		
+		assertThat(dailymealService.calculateCalories(BMR, activity)).isEqualTo(calories);
 	}
 
 }

@@ -39,8 +39,10 @@ public class HomeController {
 	public String BMRDetails(Locale locale, Model model,
 			@ModelAttribute("") UserVO userVO) {
 		// TODO: 객체 주입 확인용 메소드... 수정 필요
-		System.out.println(dailyMealService.calculateBMR(userVO));
-		return null;
+		int BMR = dailyMealService.calculateBMR(userVO);
+		System.out.println(BMR);
+		System.out.println(dailyMealService.calculateCalories(BMR, 1));
+		return  "home";
 	}
 	
 }

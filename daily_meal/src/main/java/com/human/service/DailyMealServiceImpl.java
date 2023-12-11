@@ -19,7 +19,23 @@ public class DailyMealServiceImpl implements IF_DailyMealService{
 	@Override
 	public int calculateCalories(int BMR, int activity) {
 		// TODO Auto-generated method stub
-		return 0;
+		double kcal = 0;
+		switch(activity) {
+			case 0: 
+				kcal = BMR * 1.2;
+				break;
+			case 1:
+				kcal = BMR * 1.375;
+				break;
+			case 2:
+				kcal = BMR * 1.55;
+				break;
+			case 3:
+				kcal = BMR * 1.9;
+				break;
+		}
+		kcal = Math.round(kcal);
+		return (int)kcal;
 	}
 
 }
