@@ -5,7 +5,7 @@ public class UserVO {
 	private double height;
 	private double weight;
 	private int age;
-	private boolean gender;
+	private boolean man;
 	
 	public double getHeight() {
 		return height;
@@ -31,11 +31,11 @@ public class UserVO {
 		this.age = age;
 	}
 	
-	public boolean isGender() {
-		return gender;
+	public boolean isMan() {
+		return man;
 	}
 	
-	public void setGender(boolean gender) {
-		this.gender = gender;
+	public void setGender(boolean man) {
+		this.man = man;
 	}
 }

@@ -1,0 +1,29 @@
+12/4 프로젝트 진행상황
+
+- DB 설계 , 순서도 작성완료
+
+- 깃컨벤션 준수, spring method 네이밍 컨벤션 준수, Restful 설계 준수
+
+- dao 인터페이스, mapper 설정 완료
+
+C:\git_src\spring-DailyMeal\daily_meal\src\main\java\com\human tree /f
+
+C:\git_src\spring-DailyMeal\daily_meal\src\main\resources tree /f
+
+
+
+
+- 흐름 정리
+
+inputview에서 정보받아옴 >> VO로 받아옴
+>> service에서 해당 로직 처리할 entity 호출 >> dao로 처리된 값 전달
+
+junit5로 버전 변경
+https://www.digitalocean.com/community/tutorials/junit-setup-maven\
+
+AssertJ 라이브러리 추가
+https://pjh3749.tistory.com/241
+
+
+12/9일 단위테스트를 위한 설정 완료
+

@@ -1,41 +1,31 @@
 package com.human.service;
 
+import static com.human.service.constant.BMRConstant.*;
+
 import org.springframework.stereotype.Service;
 
 import com.human.VO.UserVO;
+import com.human.service.constant.ActivityConstant;
 
 @Service
-public class DailyMealServiceImpl implements IF_DailyMealService{
+public class DailyMealServiceImpl implements IF_DailyMealService {
 
 	@Override
 	public int calculateBMR(UserVO userVO) {
-		int BMR = (int) Math.round(userVO.getWeight() * 10 + 6.25 * userVO.getHeight() - 5 * userVO.getAge());
-		if(userVO.isGender()) { // 남자일 경우
-			return BMR + 5;
+		int BMR = (int) Math.round(
+				userVO.getWeight() * WEIGHT.getNumber() 
+				+ HEIGHT.getNumber() * userVO.getHeight() 
+				- AGE.getNumber() * userVO.getAge());
+		if(userVO.isMan()) {
+			return (int) (BMR + MAN.getNumber());
 		}
-		return BMR - 161;
+		return (int) (BMR - WOMAN.getNumber());
 	}
 
 	@Override
-	public int calculateCalories(int BMR, int activity) {
-		// TODO Auto-generated method stub
-		double kcal = 0;
-		switch(activity) {
-			case 0: 
-				kcal = BMR * 1.2;
-				break;
-			case 1:
-				kcal = BMR * 1.375;
-				break;
-			case 2:
-				kcal = BMR * 1.55;
-				break;
-			case 3:
-				kcal = BMR * 1.9;
-				break;
-		}
-		kcal = Math.round(kcal);
-		return (int)kcal;
+	public int calculateCalories(int BMR, int step) {
+		return (int) Math.round(
+				BMR * ActivityConstant.toActivity(step));
 	}
 
 }
