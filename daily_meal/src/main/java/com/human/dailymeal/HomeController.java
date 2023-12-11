@@ -1,8 +1,12 @@
 package com.human.dailymeal;
 
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -12,8 +16,12 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.human.VO.MenuVO;
 import com.human.VO.UserVO;
+import com.human.domain.Meal;
+import com.human.domain.constant.MealConstant;
 import com.human.service.IF_DailyMealService;
+
 
 
 @Controller
@@ -39,8 +47,27 @@ public class HomeController {
 	public String BMRDetails(Locale locale, Model model,
 			@ModelAttribute("") UserVO userVO) {
 		// TODO: 객체 주입 확인용 메소드... 수정 필요
-		System.out.println(dailyMealService.calculateBMR(userVO));
-		return null;
+		int BMR = dailyMealService.calculateBMR(userVO);
+		System.out.println(BMR);
+		System.out.println(dailyMealService.calculateCalories(BMR, 1));
+		return  "home";
 	}
+	
+	@RequestMapping(value = "/aa", method = RequestMethod.GET)
+	public String mealTest(Locale locale, Model model) {
+		// TODO: 객체 주입 확인용 메소드... 수정 필요
+		Map<MealConstant, MenuVO> map = new HashMap<>();
+		MenuVO m = new MenuVO();
+		m.setMenu_name("제육");
+		map.put(MealConstant.RICE,m);
+		Meal meal = new Meal(map);
+		List<Meal> mealList = new ArrayList<>();
+		mealList.add(meal);
+		mealList.add(meal);
+		model.addAttribute("mealList",mealList);
+		
+		return  "testView";
+	}
+	
 	
 }
