@@ -12,5 +12,8 @@ public class Meal {
 	public Meal(final Map<MealConstant, MenuVO> meal) {
 		this.meal = meal;
 	}
-
+	
+	public MenuVO getName() {
+		return meal.get(MealConstant.RICE);
+	}
 }

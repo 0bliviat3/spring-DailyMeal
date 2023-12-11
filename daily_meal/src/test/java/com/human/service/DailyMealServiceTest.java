@@ -42,5 +42,7 @@ public class DailyMealServiceTest {
 		
 		assertThat(dailymealService.calculateCalories(BMR, activity)).isEqualTo(calories);
 	}
-
+	
+	
+	
 }
