@@ -2,12 +2,12 @@ package com.human.domain.constant;
 
 public enum MealConstant {
 	
-	RICE("밥"),
-	MAIN_MENU("메인메뉴"),
-	SIDE_MENU_1("사이드메뉴1"),
-	SIDE_MENU_2("사이드메뉴2"),
-	SOUP("국"),
-	SNACK("간식");
+	RICE("rice"),
+	MAIN_MENU("main_menu"),
+	SIDE_MENU_1("side_menu"),
+	SIDE_MENU_2("side_menu"),
+	SOUP("soup"),
+	SNACK("snack");
 	
 	private String menu;
 	
