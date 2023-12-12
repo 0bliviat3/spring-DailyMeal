@@ -1,11 +1,21 @@
 package com.human.VO;
 
+import com.google.gson.annotations.Expose;
+
 public class MenuVO {
 	
+	@Expose(serialize = false, deserialize = false)
 	private int menu_no;
+	
+	@Expose(serialize = true, deserialize = true)
 	private String menu_name;
+	
+	@Expose(serialize = true, deserialize = true)
 	private int menu_kcal;
+	
+	@Expose(serialize = true, deserialize = true)
 	private int menu_cost;
+	
 	
 	public int getMenu_no() {
 		return menu_no;
