@@ -29,7 +29,6 @@ public class MealTest {
 	void setMeal() {
 		Map<MealConstant, MenuVO> testData = new EnumMap<>(MealConstant.class);
 		
-		// TODO: 테스트 데이터 임의 생성
 		MenuVO rice = new MenuVO();
 		MenuVO mainMenu = new MenuVO();
 		MenuVO sideMenu1 = new MenuVO();
@@ -73,21 +72,22 @@ public class MealTest {
 	
 	@Test
 	void getCostByTestData() {
-		assertThat(meal.getCost()).isEqualTo(15700); // TODO: 테스트 데이터 생성
+		assertThat(meal.getCost()).isEqualTo(15700);
 	}
 	
 	@Test
 	void getKcalByTestData() {
-		assertThat(meal.getKcal()).isEqualTo(927); // TODO: 테스트 데이터 생성
+		assertThat(meal.getKcal()).isEqualTo(927);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	void getMealJson() throws Exception {
 		String path = System.getProperty("user.dir") + "\\..\\docs\\meal.json";
 		Reader reader = new FileReader(path);
 		JSONParser parser = new JSONParser();
 		JSONArray mealJson = (JSONArray) parser.parse(reader);
-		assertThat(meal.getMealJson().toString()).isEqualTo(mealJson.toString());
+		assertThat(meal.getMealJson()).isEqualTo(mealJson);
 	}
 
 }
