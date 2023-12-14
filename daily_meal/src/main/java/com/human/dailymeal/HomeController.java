@@ -43,15 +43,21 @@ public class HomeController {
 		return "home"; 
 	}
 	
-	@RequestMapping(value = "/input", method = RequestMethod.POST)
+	@RequestMapping(value = "/inputInfo", method = RequestMethod.POST)
 	public String BMRDetails(Locale locale, Model model,
-			@ModelAttribute("") UserVO userVO) {
+			@ModelAttribute("") UserVO userVO, int exerciseCnt, int mealCnt) {
 		// TODO: 객체 주입 확인용 메소드... 수정 필요
 		int BMR = dailyMealService.calculateBMR(userVO);
+		int calories = dailyMealService.calculateCalories(BMR, exerciseCnt);
+		
+		
 		System.out.println(BMR);
-		System.out.println(dailyMealService.calculateCalories(BMR, 1));
+		System.out.println(calories);
+		System.out.println(exerciseCnt + "/"+mealCnt);
 		return  "home";
 	}
+	
+	
 	
 	@RequestMapping(value = "/aa", method = RequestMethod.GET)
 	public String mealTest(Locale locale, Model model) {
@@ -68,6 +74,8 @@ public class HomeController {
 		
 		return  "testView";
 	}
+	
+	
 	
 	
 }

@@ -13,7 +13,7 @@
 <body>
 
 <div style="position:absolute; top:25%; left:38.5%; text-align:center;">
-	<form action = "input" method = "post" id="myInput">
+	<form action = "inputInfo" method = "post" id="myInput">
 		<div class="input-group mb-3">
 		  <span class="input-group-text" id="basic-addon1">나이</span>
 		  <input type="text" name="age" class="form-control" placeholder="나이" id="age">
@@ -30,8 +30,15 @@
 		  <span class="input-group-text" id="basic-addon1">성별</span>
 		  <input type="text"  name="gender" class="form-control" placeholder="성별"  id="gender">
 		</div>
-		
-		<input type="button" value="입력" id="input_btn" class="btn btn-outline-primary">
+		<div class="input-group mb-3">
+		  <span class="input-group-text" id="basic-addon1">주당 운동 횟수</span>
+		  <input type="text"  name="exerciseCnt" class="form-control" placeholder="주당운동횟수"  id="exerciseCnt">
+		</div>
+		<div class="input-group mb-3">
+		  <span class="input-group-text" id="basic-addon1">하루 식사 횟수</span>
+		  <input type="text"  name="mealCnt" class="form-control" placeholder="하루 식사 횟수"  id="mealCnt">
+		</div>
+		<input type="button" value="식단 생성하기" id="input_btn" class="btn btn-outline-primary">
 		
 	</form>
 	 
