@@ -139,4 +139,8 @@ select * from menu_tbl;
 
 --메뉴 카테고리 추가
 alter table menu_tbl add menu_category varchar2(10);
-alter table menu_tbl add check(menu_category in ('밥', '메인메뉴', '사이드메뉴', '국', '간식'));
+alter table menu_tbl add check(menu_category in ('rice', 'main_manu', 'side_menu', 'soup', 'snack'));
+commit;
+
+alter table menu_tbl drop column menu_category;
+

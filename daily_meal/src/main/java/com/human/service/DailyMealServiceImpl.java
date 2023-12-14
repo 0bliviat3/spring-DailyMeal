@@ -1,24 +1,30 @@
 package com.human.service;
 
-import static com.human.service.constant.BMRConstant.AGE;
-import static com.human.service.constant.BMRConstant.HEIGHT;
-import static com.human.service.constant.BMRConstant.MAN;
-import static com.human.service.constant.BMRConstant.WEIGHT;
-import static com.human.service.constant.BMRConstant.WOMAN;
-
-import java.util.List;
+import static com.human.service.constant.BMRConstant.*;
 
 import javax.inject.Inject;
 
+<<<<<<< HEAD
+import javax.inject.Inject;
+
+=======
+import org.json.simple.JSONArray;
+>>>>>>> c9ea88084f8d48bd1d5b80c3be496bf8cc08c33c
 import org.springframework.stereotype.Service;
 
 import com.human.VO.UserVO;
 import com.human.dao.IF_MenuDAO;
+<<<<<<< HEAD
 import com.human.domain.Meal;
+=======
+>>>>>>> c9ea88084f8d48bd1d5b80c3be496bf8cc08c33c
 import com.human.service.constant.ActivityConstant;
 
 @Service
 public class DailyMealServiceImpl implements IF_DailyMealService {
+	
+	@Inject
+	private IF_MenuDAO manuDAO;
 
 	@Inject
 	IF_MenuDAO menuDAO;
@@ -43,13 +49,15 @@ public class DailyMealServiceImpl implements IF_DailyMealService {
 	}
 
 	@Override
-	public List<Meal> addMeal(int calories, int mealCnt) {
-		// TODO Auto-generated method stub
-		int onceCalories = calories/mealCnt;
-		// 1. 메인메뉴 랜던 선택, 칼로리 = 칼로리 - 메인메뉴칼로리
-		// 2. 밥 선택, 칼로리 = 칼로리 - 밥칼로리 .... 서브12메뉴, 국 //필요에 맞게 간식까지....
+	public JSONArray addMeal(int calories, int mealCnt) {
+		// TODO: 칼로리와 식사빈도수를 통해 식단을 생성하고 json 형태로 리턴
+		// 하루 식사 빈도수에 따라 칼로리 나눔
+		// 나눈 칼로리의 1/3이 메인 메뉴의 상한선 : 이때 DB는 100g 기준으로 저장하므로 
+		// 메인메뉴의 상한선을 2끼의 경우 300g으로 3끼의 경우 200g으로 계산
+		// 즉 2끼인경우 상한이 나눈 칼로리의 1/9 3끼의 경우 1/6
+		// 원래 칼로리 기준 : 2끼 ) 1/18 3끼) 1/18
 		
-		
+		// 메인 메뉴 먼저 가져와서 계산
 		
 		
 		return null;

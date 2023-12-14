@@ -1,0 +1,50 @@
+[
+  {
+    "menu_type" : "rice",
+    "menu_info" : {
+      "menu_name" : "쌀밥",
+      "menu_cost" : 1000,
+      "menu_kcal" : 286
+    }
+  },
+  {
+    "menu_type" : "main_menu",
+    "menu_info" : {
+      "menu_name" : "제육볶음",
+      "menu_cost" : 10000,
+      "menu_kcal" : 382
+    }
+  },
+  {
+    "menu_type" : "side_menu",
+    "menu_info" : {
+      "menu_name" : "단무지",
+      "menu_cost" : 1300,
+      "menu_kcal" : 26
+    }
+  },
+  {
+    "menu_type" : "side_menu",
+    "menu_info" : {
+      "menu_name" : "배추김치",
+      "menu_cost" : 1800,
+      "menu_kcal" : 21
+    }
+  },
+  {
+    "menu_type" : "soup",
+    "menu_info" : {
+      "menu_name" : "오징어무국",
+      "menu_cost" : 1100,
+      "menu_kcal" : 142
+    }
+  },
+  {
+    "menu_type" : "snack",
+    "menu_info" : {
+      "menu_name" : "피크닉",
+      "menu_cost" : 500,
+      "menu_kcal" : 70
+    }
+  }
+]

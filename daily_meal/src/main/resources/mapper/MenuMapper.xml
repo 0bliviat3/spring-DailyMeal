@@ -15,6 +15,10 @@
 	<select id="selectMenuList" resultType="com.human.VO.MenuVO">
 		select * from menu_tbl
 	</select>
+	
+	<select id= "selectMenuByCategory" parameterType="com.human.VO.MenuVO" resultType="com.human.VO.MenuVO">
+		
+	</select>
 
 	
 </mapper>
